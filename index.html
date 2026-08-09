@@ -4,6 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Md. Sohel Rana — PGD-GB Batch 11 Industry Attachment</title>
+<meta name="description" content="Industry Attachment Report and defense presentation. Sustainable and ethical sourcing practices in the Bangladeshi RMG industry, a buying and liaison office perspective. PGD-GB Batch 11, IBA, University of Dhaka." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -13,55 +14,135 @@
   body { background: #F4F2ED; color: #101A2B; font-family: 'IBM Plex Sans', sans-serif; -webkit-font-smoothing: antialiased; }
   a { color: #C05A18; text-decoration: none; }
   a:hover { color: #101A2B; }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 72px 28px 96px; }
-  .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #C05A18; margin: 0 0 14px; }
-  .rule { width: 76px; height: 4px; background: #C05A18; margin: 0 0 28px; }
-  h1 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 40px; line-height: 1.18; margin: 0 0 18px; text-wrap: pretty; }
-  .lede { font-size: 18px; line-height: 1.55; color: #4A5563; margin: 0 0 40px; max-width: 62ch; }
-  .meta { display: flex; flex-wrap: wrap; gap: 32px; border-top: 1px solid #DAD4C8; border-bottom: 1px solid #DAD4C8; padding: 22px 0; margin: 0 0 44px; }
-  .meta div { display: flex; flex-direction: column; gap: 5px; }
-  .meta span:first-child { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A9099; }
-  .meta span:last-child { font-size: 15px; }
-  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  @media (max-width: 680px) { .cards { grid-template-columns: 1fr; } h1 { font-size: 30px; } .wrap { padding: 48px 20px 64px; } }
-  .card { display: flex; flex-direction: column; gap: 10px; background: #FFFFFF; border: 1px solid #E4DFD5; border-top: 4px solid #16233A; padding: 26px; transition: border-color .15s ease, transform .15s ease; }
-  .card:hover { border-top-color: #C05A18; transform: translateY(-2px); }
-  .card h2 { font-family: 'Source Serif 4', Georgia, serif; font-size: 21px; font-weight: 600; margin: 0; color: #101A2B; }
-  .card p { font-size: 14.5px; line-height: 1.5; color: #5B6470; margin: 0; }
-  .card .go { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #C05A18; margin-top: 4px; }
-  footer { margin-top: 56px; border-top: 1px solid #DAD4C8; padding-top: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.7; color: #8A9099; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 14px 28px 40px; }
+
+  .mono { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A9099; }
+
+  /* ---------- logo bar ---------- */
+  .logos { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding: 0 0 14px; margin: 0 0 20px; border-bottom: 1px solid #DAD4C8; }
+  .logos img { width: auto; display: block; mix-blend-mode: multiply; }
+  .logos img.iba { height: 66px; }
+  .logos img.sicip { height: 52px; }
+
+  /* ---------- title ---------- */
+  .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #C05A18; margin: 0 0 10px; }
+  h1 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 29px; line-height: 1.2; margin: 0 0 11px; text-wrap: balance; }
+  .lede { font-size: 14.5px; line-height: 1.5; color: #5B6470; margin: 0; }
+  .head { display: grid; grid-template-columns: 1.42fr 1fr; gap: 32px; align-items: start; margin: 0 0 24px; }
+
+  /* ---------- action cards ---------- */
+  .actions { display: flex; flex-direction: column; gap: 10px; }
+  .card { display: block; padding: 16px 18px; border: 1px solid #E4DFD5; background: #FFFFFF; transition: transform .14s ease, box-shadow .14s ease; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(16,35,58,.10); }
+  .card .t { font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; font-weight: 600; color: #101A2B; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .card .d { font-size: 13px; line-height: 1.45; color: #5B6470; margin: 5px 0 0; }
+  .card.primary { background: #16233A; border-color: #16233A; }
+  .card.primary .t { color: #FFFFFF; }
+  .card.primary .d { color: #B9C2CE; }
+  .card .arw { color: #C05A18; font-family: 'IBM Plex Mono', monospace; font-size: 16px; }
+  .card.primary .arw { color: #F0873F; }
+
+  /* ---------- people ---------- */
+  .people { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 0 0 14px; }
+  .person { display: flex; gap: 14px; background: #FFFFFF; border: 1px solid #E4DFD5; border-left: 3px solid #16233A; padding: 14px 16px; }
+  .person img { width: 62px; height: 76px; object-fit: cover; object-position: top center; flex: none; background: #fff; border: 1px solid #E9E4DA; }
+  .person .name { font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; font-weight: 600; margin: 4px 0 4px; line-height: 1.2; }
+  .person p { margin: 0; font-size: 13px; line-height: 1.45; color: #5B6470; }
+
+  .org { display: flex; flex-wrap: wrap; gap: 8px 34px; font-size: 12.5px; color: #5B6470; margin: 0 0 20px; }
+  .org p { margin: 0; }
+
+  /* ---------- dates ---------- */
+  .dates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; border-top: 1px solid #DAD4C8; border-bottom: 1px solid #DAD4C8; padding: 14px 0; margin: 0 0 8px; }
+  .dates div span { display: block; }
+  .dates .v { font-size: 14.5px; font-weight: 500; margin-top: 5px; }
+  .ok { color: #1F7A4D; }
+  .note { font-size: 11.5px; color: #8A9099; margin: 0 0 22px; }
+
+  footer { border-top: 1px solid #DAD4C8; padding-top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; line-height: 1.7; color: #8A9099; }
+
+  @media (max-width: 780px) {
+    .head { grid-template-columns: 1fr; gap: 22px; }
+  }
+  @media (max-width: 620px) {
+    .wrap { padding: 20px 18px 36px; }
+    .people, .dates { grid-template-columns: 1fr; gap: 12px; }
+    .logos { justify-content: center; gap: 16px; }
+    .logos img.iba { height: 44px; }
+    .logos img.sicip { height: 34px; }
+    h1 { font-size: 25px; }
+  }
 </style>
 </head>
 <body>
+
 <div class="wrap">
-  <p class="eyebrow">Industry Attachment · PGD-GB Batch 11</p>
-  <div class="rule"></div>
-  <h1>Sustainable and Ethical Sourcing Practices and Their Challenges in the Bangladeshi RMG Industry</h1>
-  <p class="lede">A Buying/Liaison Office Perspective — an empirical study of woven-bottoms sourcing at the LPP S.A. Bangladesh Liaison Office.</p>
 
-  <div class="meta">
-    <div><span>Author</span><span>Md. Sohel Rana · Roll 251110214</span></div>
-    <div><span>Programme</span><span>PGD-GB, IBA, University of Dhaka</span></div>
-    <div><span>Supervisor</span><span>Mohammad Saif Noman Khan</span></div>
-    <div><span>Submitted</span><span>27 March 2026</span></div>
+  <div class="logos">
+    <img class="iba" src="assets/iba.png" alt="Institute of Business Administration, University of Dhaka" />
+    <img class="sicip" src="assets/sicip.png" alt="SICIP, Skills for Industry Competitiveness and Innovation Program" />
   </div>
 
-  <div class="cards">
-    <a class="card" href="industry-attachment-report.html">
-      <h2>Full report</h2>
-      <p>The complete Industry Attachment Report — eight sections, five tables, six figures, references and appendices.</p>
-      <span class="go">Read →</span>
-    </a>
-    <a class="card" href="defense-deck.html">
-      <h2>Defense presentation</h2>
-      <p>The twelve-slide defense deck covering objectives, methodology, five findings and recommendations.</p>
-      <span class="go">View →</span>
-    </a>
+  <div class="head">
+    <div>
+      <p class="eyebrow">Industry Attachment · PGD-GB Batch 11</p>
+      <h1>Sustainable and Ethical Sourcing Practices and Their Challenges in the Bangladeshi RMG Industry</h1>
+      <p class="lede">A buying and liaison office perspective. An empirical study of woven-bottoms sourcing at the LPP S.A. Bangladesh Liaison Office.</p>
+    </div>
+
+    <div class="actions">
+      <a class="card primary" href="industry-attachment-report.html" target="_blank" rel="noopener noreferrer">
+        <span class="t">Read the full report <span class="arw">&rarr;</span></span>
+        <p class="d">Eight sections, five tables, six figures, references and appendices.</p>
+      </a>
+      <a class="card" href="defense-deck.html" target="_blank" rel="noopener noreferrer">
+        <span class="t">Defense presentation <span class="arw">&rarr;</span></span>
+        <p class="d">Twelve slides. Objectives, methodology, five findings, recommendations.</p>
+      </a>
+    </div>
   </div>
+
+  <div class="people">
+    <div class="person">
+      <img src="assets/sohel-rana.png" alt="Md. Sohel Rana" />
+      <div>
+        <span class="mono">Author</span>
+        <p class="name"><a href="https://sohelprsnl.com" target="_blank" rel="noopener noreferrer">Md. Sohel Rana</a></p>
+        <p>
+          Roll-251110214, Batch-11, SICIP, PGD-GB, IBA-DU<br />
+          Merchandising Team Leader<br />
+          <a href="https://www.lpp.com/en/" target="_blank" rel="noopener noreferrer">LPP S.A. Bangladesh Liaison Office</a>
+        </p>
+      </div>
+    </div>
+    <div class="person">
+      <img src="assets/saif-noman-khan.jpg" alt="Mohammad Saif Noman Khan" />
+      <div>
+        <span class="mono">Supervisor</span>
+        <p class="name"><a href="https://www.du.ac.bd/faculty/faculty_details/IBA/2666" target="_blank" rel="noopener noreferrer">Mohammad Saif Noman Khan</a></p>
+        <p>
+          Associate Professor<br />
+          <a href="https://www.iba-du.edu/localhost/iba/index.html" target="_blank" rel="noopener noreferrer">Institute of Business Administration</a><br />
+          <a href="https://www.du.ac.bd/" target="_blank" rel="noopener noreferrer">University of Dhaka</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="org">
+    <p><span class="mono">Internship organisation</span> &nbsp;Own organisation, LPP S.A. Bangladesh Liaison Office</p>
+    <p><span class="mono">Internship timeline</span> &nbsp;17 February 2026 to 22 March 2026</p>
+  </div>
+
+  <div class="dates">
+    <div><span class="mono">First submission</span><span class="v">27 March 2026</span></div>
+    <div><span class="mono">AI and plagiarism check</span><span class="v"><span class="ok">Cleared</span> 14 July 2026</span></div>
+    <div><span class="mono">Final submission, hard and soft copy</span><span class="v">19 July 2026</span></div>
+  </div>
+  <p class="note">Requirement: plagiarism below 30 percent, AI detection below 60 percent.</p>
 
   <footer>
-    Institute of Business Administration, University of Dhaka<br />
-    Post Graduate Diploma in Garment Business · Batch 11
+    Institute of Business Administration, University of Dhaka &middot; Post Graduate Diploma in Garment Business &middot; Industry Attachment
   </footer>
 </div>
 </body>
