@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#F4F2ED" />
 <title>Md. Sohel Rana — PGD-GB Batch 11 Industry Attachment</title>
 <meta name="description" content="Industry Attachment Report and defense presentation. Sustainable and ethical sourcing practices in the Bangladeshi RMG industry, a buying and liaison office perspective. PGD-GB Batch 11, IBA, University of Dhaka." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,10 +12,19 @@
 <style>
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
-  body { background: #F4F2ED; color: #101A2B; font-family: 'IBM Plex Sans', sans-serif; -webkit-font-smoothing: antialiased; }
-  a { color: #C05A18; text-decoration: none; }
+  /* stop iOS Safari inflating text when the phone is turned sideways */
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { background: #F4F2ED; color: #101A2B; font-family: 'IBM Plex Sans', sans-serif;
+         -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { max-width: 100%; }
+  a { color: #C05A18; text-decoration: none; -webkit-tap-highlight-color: rgba(192,90,24,.18); }
   a:hover { color: #101A2B; }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 14px 28px 40px; }
+  /* respects the iPhone notch and home indicator in landscape */
+  .wrap { max-width: 980px; margin: 0 auto;
+          padding-top: 14px;
+          padding-right: calc(28px + env(safe-area-inset-right));
+          padding-bottom: calc(40px + env(safe-area-inset-bottom));
+          padding-left: calc(28px + env(safe-area-inset-left)); }
 
   .mono { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A9099; }
 
@@ -26,7 +36,7 @@
 
   /* ---------- title ---------- */
   .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #C05A18; margin: 0 0 10px; }
-  h1 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 29px; line-height: 1.2; margin: 0 0 11px; text-wrap: balance; }
+  h1 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(22px, 4.6vw, 29px); line-height: 1.2; margin: 0 0 11px; text-wrap: balance; }
   .lede { font-size: 14.5px; line-height: 1.5; color: #5B6470; margin: 0; }
   .head { display: grid; grid-template-columns: 1.42fr 1fr; gap: 32px; align-items: start; margin: 0 0 24px; }
 
@@ -48,6 +58,8 @@
   .person img { width: 62px; height: 76px; object-fit: cover; object-position: top center; flex: none; background: #fff; border: 1px solid #E9E4DA; }
   .person .name { font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; font-weight: 600; margin: 4px 0 4px; line-height: 1.2; }
   .person p { margin: 0; font-size: 13px; line-height: 1.45; color: #5B6470; }
+  /* bigger finger targets without changing how the text looks */
+  .person p a { display: inline-block; padding: 3px 0; }
 
   .org { display: flex; flex-wrap: wrap; gap: 8px 34px; font-size: 12.5px; color: #5B6470; margin: 0 0 20px; }
   .org p { margin: 0; }
@@ -61,16 +73,45 @@
 
   footer { border-top: 1px solid #DAD4C8; padding-top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; line-height: 1.7; color: #8A9099; }
 
-  @media (max-width: 780px) {
-    .head { grid-template-columns: 1fr; gap: 22px; }
+  /* ---------- tablets and small laptops ---------- */
+  @media (max-width: 860px) {
+    .head { grid-template-columns: 1fr; gap: 20px; }
   }
-  @media (max-width: 620px) {
-    .wrap { padding: 20px 18px 36px; }
-    .people, .dates { grid-template-columns: 1fr; gap: 12px; }
-    .logos { justify-content: center; gap: 16px; }
-    .logos img.iba { height: 44px; }
-    .logos img.sicip { height: 34px; }
-    h1 { font-size: 25px; }
+
+  /* ---------- phones, landscape and large handsets ---------- */
+  @media (max-width: 700px) {
+    .wrap { padding-top: 12px;
+            padding-right: calc(18px + env(safe-area-inset-right));
+            padding-left: calc(18px + env(safe-area-inset-left)); }
+    .logos { padding-bottom: 12px; margin-bottom: 16px; }
+    .logos img.iba { height: 50px; }
+    .logos img.sicip { height: 38px; }
+    .people { grid-template-columns: 1fr; gap: 10px; }
+    .dates { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .org { gap: 6px 22px; }
+    .card { padding: 15px 16px; }
+    .card .t { font-size: 17px; }
+  }
+
+  /* ---------- phones, portrait ---------- */
+  @media (max-width: 480px) {
+    .logos img.iba { height: 42px; }
+    .logos img.sicip { height: 32px; }
+    .dates { grid-template-columns: 1fr; gap: 12px; padding: 12px 0; }
+    .dates .v { font-size: 15px; }
+    .org { flex-direction: column; gap: 8px; }
+    .person { padding: 13px 14px; gap: 12px; }
+    .person img { width: 58px; height: 71px; }
+    .lede { font-size: 14px; }
+    footer { line-height: 1.8; }
+  }
+
+  /* ---------- very narrow phones, 360px and under ---------- */
+  @media (max-width: 370px) {
+    .logos img.iba { height: 36px; }
+    .logos img.sicip { height: 28px; }
+    .wrap { padding-right: calc(14px + env(safe-area-inset-right));
+            padding-left: calc(14px + env(safe-area-inset-left)); }
   }
 </style>
 </head>
