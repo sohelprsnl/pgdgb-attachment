@@ -1,0 +1,15 @@
+# Pages CMS settings (https://app.pagescms.org)
+# This site is a finished report and defense deck. There are no forms.
+# Each page opens as code so small text fixes can be made from a browser.
+media:
+  input: assets
+  output: assets
+
+content:
+  - name: pages
+    label: Pages (raw HTML)
+    type: group
+    items:
+      - { name: page-index, label: Home, type: file, path: index.html, format: code }
+      - { name: page-report, label: Industry attachment report, type: file, path: industry-attachment-report.html, format: code }
+      - { name: page-deck, label: Defense deck, type: file, path: defense-deck.html, format: code }
